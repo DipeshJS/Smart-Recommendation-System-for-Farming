@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSF: Crop Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #C8E6C9, #81C784);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #C8E6C9, #81C784);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+
+        input[type="number"], button {
+            margin: 10px 0; /* Increased margin */
+            padding: 15px; /* Increased padding */
+            width: 100%;
+            max-width: 300px;
+            background-color: white;
+            border: 1px solid #81C784;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            margin-top: 60px; /* Increased margin */
+            margin-right: 68px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* New CSS for sections */
+form > div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form > div h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form > div > label {
+    font-weight: bold;
+    display: block; /* Ensures labels are on new lines */
+}
+
+form > div > input {
+    margin: 5px 0;
+    width: calc(100% - 10px); /* Adjusted width */
+}
+
+/* Align predict button to center */
+form button {
+    margin-top: 20px;
+    text-align: center;
+}
+        
+    </style>
+</head>
+<body>
+
+    <form id="input-form">
+        <div>
+
+            <h2>Meteorological Parameters</h2>
+            <label for="Rainfall">Rainfall (mm)</label>
+            <input type="number" id="Rainfall" placeholder="Enter Rainfall (mm)" required>
+            <label for="Temperature">Temperature (°C)</label>
+            <input type="number" id="Temperature" placeholder="Enter Temperature (°C)" required>
+            <label for="Humidity">Humidity (%)</label>
+            <input type="number" id="Humidity" placeholder="Enter Humidity (%)" required>
+        </div>
+
+        <div>
+
+            <h2>Soil Health Parameters</h2>
+            <label for="Nitrogen">Nitrogen</label>
+            <input type="number" id="Nitrogen" placeholder="Enter Nitrogen value" required>
+            <label for="Phosphorus">Phosphorus</label>
+            <input type="number" id="Phosporus" placeholder="Enter Phosphorus value" required>
+            <label for="Potassium">Potassium</label>
+            <input type="number" id="Potassium" placeholder="Enter Potassium value" required>
+            <label for="Ph">pH</label>
+            <input type="number" id="Ph" placeholder="Enter pH value" required>
+        </div>    
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+
+    
+        </script>
+        <script src="script.js"></script>
+</body>
+</html>
